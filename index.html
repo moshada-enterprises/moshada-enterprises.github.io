@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Moshada Enterprises</title>
+  <title>W3.CSS Blue Gold Theme</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
 
     /* Custom Blue & Gold Theme */
     .w3-theme {background-color: #0b3d91 !important; color: #fff !important;}
@@ -27,46 +34,88 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-theme w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l2">Moshada</a>
-<!--
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-theme">Import Calculator</a>
--->
-    <a href="https://www.customs.gov.lk/exchange-rates/" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-hover-theme">Exchange Rates</a>
-    <a href="https://dmt.gov.lk/index.php?option=com_content&view=article&id=39&Itemid=156&lang=en" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-hover-theme">RMV</a>
-    <a href="https://www.customs.gov.lk/customs-tariff/import-tariff/" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-hover-theme">Import Tariff</a>
-    <a href="https://www.treasury.gov.lk/acts-gazettes-circulars" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-theme">Treasury</a>
-    <a href="https://www.cbsl.gov.lk/en/rates-and-indicators/exchange-rates" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-theme">Central Bank</a>
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-hover-black w3-button w3-theme-l1">Moshada</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="https://www.customs.gov.lk/exchange-rates/" target="_blank">Exchange Rates</a>
+    <a class="w3-bar-item w3-button w3-hide-small w3-hover-black" href="https://dmt.gov.lk/index.php?option=com_content&view=article&id=39&Itemid=156&lang=en" target="_blank">RMV</a>
+    <a class="w3-bar-item w3-button w3-hide-small w3-hover-black" href="https://www.customs.gov.lk/customs-tariff/import-tariff/" target="_blank">Import Tariff</a>
+    <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-black" href="https://www.treasury.gov.lk/acts-gazettes-circulars" target="_blank">Treasury</a>
+    <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-black" href="https://www.cbsl.gov.lk/en/rates-and-indicators/exchange-rates" target="_blank">Central Bank</a>
   </div>
 </div>
 
-<!-- Main content -->
-<div class="w3-main">
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="https://www.customs.gov.lk/exchange-rates/" target="_blank">Exchange Rates</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="https://dmt.gov.lk/index.php?option=com_content&view=article&id=39&Itemid=156&lang=en" target="_blank">RMV</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="https://www.customs.gov.lk/customs-tariff/import-tariff/" target="_blank">Import Tariff</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="https://www.treasury.gov.lk/acts-gazettes-circulars" target="_blank">Treasury</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="https://www.cbsl.gov.lk/en/rates-and-indicators/exchange-rates" target="_blank">Central Bank</a>
+</nav>
 
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Vehicle Import Duty</h1>
-      <p>Duty Calculation Based on Gazette, 10 & 27 January 2025.</p>
-      <div class="w3-bar-item" style="padding:0; margin-left: 1px; overflow: auto; max-height: 500px; width: 104%; border: 1px solid #ddd;">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTbP5bJD_9yKDAj_sUwMZohhzK09bNBXEClTKgbvvVWHDOPrhUp6o4Ulxl5rSoRFIB5oZLJ13XcSC_5/pubhtml" width="100%" height="5000" style="border:none; overflow:auto;"></iframe>
+      <p>Duty calculations are based on the Gazettes dated 10th and 27th January 2025</p>
+      <div class="w3-bar-item" style="padding:0; margin-left: 1px; overflow-x: auto; max-height: 500px; width: 100%; border: 1px solid #ddd;">
+        <iframe
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTbP5bJD_9yKDAj_sUwMZohhzK09bNBXEClTKgbvvVWHDOPrhUp6o4Ulxl5rSoRFIB5oZLJ13XcSC_5/pubhtml"
+                width="100%"
+                height="1000"
+                style="border:none; min-width: 1000px;">
+        </iframe>
       </div>
     </div>
   </div>
 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>About Us</h4>
-      <p><strong>Moshada Enterprises</strong><br>
-        No. 126/5/1-E, 5th Floor Y.M.B.A Bldg, Colombo 01.<br>
-        Tel: 0773637663, WhatsApp: 0723342434</p>
+      <h4>Contact Us</h4>
+      <h3>Moshada Enterprises</h3>
+      <p><a href="https://www.google.com/maps?q=WRPW%2BCM+Colombo,+Sri+Lanka" target="_blank">No. 126/5/1-E, 5th Floor, YMBA Building, Lotus Rd, Colombo 00100, Sri Lanka</a><br>
+        <a href="https://wa.me/+94723342434" target="_blank">WhatsApp: +94 72 334 2434</a><br>
+        <a href="tel:+94773637663">Tel: +94 77 363 7663</a>
+      </p>
     </div>
-
     <div class="w3-container w3-theme-l1">
-      <p>Powered by <a href="http://codix.co.nz" target="_blank" style="color: #fff;">Codix</a></p>
+      <p>Powered by <a href="#" style="color: #fff;">Codix</a></p>
     </div>
   </footer>
 
 </div>
+<script>
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
+
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
+
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
+</script>
 
 </body>
 </html>
