@@ -26,7 +26,12 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
-
+.custom-table thead th {
+  position: sticky;
+  top: 0px; /* Adjust based on the actual height of your navbar */
+  z-index: 0; /* High enough to stay above table content */
+  background-color: #333; /* Reapply the header bg-color */
+}
 .responsive-table td, 
 .responsive-table th {
   font-family: 'Roboto Mono', monospace;
@@ -54,22 +59,20 @@ body, html {
   display: none;
 }
 
-/* Small screens (max-width: 600px) - Show columns 1, 2, 3, 19 */
 @media (max-width: 600px) {
-  .custom-table .col-1 , .custom-table .col-2, .custom-table .col-3, .custom-table .col-19 {
+  .custom-table .col-1 , .custom-table .col-2, .custom-table .col-3, .custom-table .col-14 {
     display: table-cell;
   }
-  .custom-table .col-1 th, .custom-table .col-2 th, .custom-table .col-3 th, .custom-table .col-19 th {
+  .custom-table .col-1 th, .custom-table .col-2 th, .custom-table .col-3 th, .custom-table .col-14 th {
     display: table-cell; /* Show headers for the same columns */
   }
 }
 
-/* Medium screens (≥ 601px) - Show columns 1, 2, 3, 4, 8, 9, 10, 11, 20 */
 @media (min-width: 601px) {
-  .custom-table .col-1, .custom-table .col-2, .custom-table .col-3, .custom-table .col-4, .custom-table .col-10, .custom-table .col-19 {
+  .custom-table .col-1, .custom-table .col-2, .custom-table .col-3, .custom-table .col-4, .custom-table .col-12, .custom-table .col-14 {
     display: table-cell;
   }
-  .custom-table .col-1 th, .custom-table .col-2 th, .custom-table .col-3 th, .custom-table .col-4 th, .custom-table .col-10 th, .custom-table .col-19 th {
+  .custom-table .col-1 th, .custom-table .col-2 th, .custom-table .col-3 th, .custom-table .col-4 th, .custom-table .col-12 th, .custom-table .col-14 th {
     display: table-cell; /* Show headers for the same columns */
   }
 }
@@ -87,7 +90,7 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Moshada</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
@@ -114,7 +117,7 @@ body, html {
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-<!-- Header with full-height image -->
+ Header with full-height image
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
@@ -143,111 +146,81 @@ body, html {
           <th class="col-3">Grade</th>
           <th class="col-4">Type</th>
           <th class="col-5">Engine</th>
-          <th class="col-6">Drive</th>
-          <th class="col-7">Cost</th>
-          <th class="col-8">Insurance</th>
-          <th class="col-9">Freight</th>
-          <th class="col-10">CIF (JPY)</th>
-          <th class="col-11">CIF (LKR)</th>
-          <th class="col-12">CID</th>
-          <th class="col-13">SUR</th>
-          <th class="col-14">XID</th>
-          <th class="col-15">LUX</th>
-          <th class="col-16">VAT</th>
-          <th class="col-17">VEL</th>
-          <th class="col-18">COM & EXA</th>
-          <th class="col-19">Duty</th>
-          <th class="col-20">Duty in Millions</th>
+          <th class="col-6">Fuel</th>
+          <th class="col-7">Seats</th>
+          <th class="col-8">Drive</th>
+          <th class="col-9">Cost</th>
+          <th class="col-10">Insurance</th>
+          <th class="col-11">Freight</th>
+          <th class="col-12">CIF (JPY)</th>
+          <th class="col-13">CIF (LKR)</th>
+          <th class="col-14">Duty</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="col-1">Toyota</td>
           <td class="col-2">Land Cruiser 300</td>
-          <td class="col-3">GR SPORT 3.3L Diesel (5-seater)</td>
+          <td class="col-3">GR SPORT</td>
           <td class="col-4">3DA-FJA300W</td>
           <td class="col-5">3,300</td>
-          <td class="col-6">4WD</td>
-          <td class="col-7">6,181,818</td>
-          <td class="col-8">110,000</td>
-          <td class="col-9">15,000</td>
-          <td class="col-10">6,306,818</td>
-          <td class="col-11">12,759,955</td>
-          <td class="col-12">2,551,991</td>
-          <td class="col-13">1,275,995</td>
-          <td class="col-14">43,890,000</td>
-          <td class="col-15">5,807,964</td>
-          <td class="col-16">12,161,142</td>
-          <td class="col-17">15,000</td>
-          <td class="col-18">1,750</td>
-          <td class="col-19">65,703,842</td>
-          <td class="col-20">65.70</td>
+          <td class="col-6">Diesel</td>
+          <td class="col-7">5</td>
+          <td class="col-8">4WD</td>
+          <td class="col-9">6,181,818</td>
+          <td class="col-10">110,000</td>
+          <td class="col-11">15,000</td>
+          <td class="col-12">6,306,818</td>
+          <td class="col-13">12,759,955</td>
+          <td class="col-14">65,703,842</td>
         </tr>
         <tr>
           <td class="col-1">Toyota</td>
           <td class="col-2">Land Cruiser 300</td>
-          <td class="col-3">GR SPORT 3.3L Diesel (5-seater)</td>
+          <td class="col-3">GR SPORT</td>
           <td class="col-4">3DA-FJA300W</td>
           <td class="col-5">3,300</td>
-          <td class="col-6">4WD</td>
-          <td class="col-7">6,181,818</td>
-          <td class="col-8">110,000</td>
-          <td class="col-9">15,000</td>
-          <td class="col-10">6,306,818</td>
-          <td class="col-11">12,759,955</td>
-          <td class="col-12">2,551,991</td>
-          <td class="col-13">1,275,995</td>
-          <td class="col-14">43,890,000</td>
-          <td class="col-15">5,807,964</td>
-          <td class="col-16">12,161,142</td>
-          <td class="col-17">15,000</td>
-          <td class="col-18">1,750</td>
-          <td class="col-19">65,703,842</td>
-          <td class="col-20">65.70</td>
+          <td class="col-6">Diesel</td>
+          <td class="col-7">5</td>
+          <td class="col-8">4WD</td>
+          <td class="col-9">6,181,818</td>
+          <td class="col-10">110,000</td>
+          <td class="col-11">15,000</td>
+          <td class="col-12">6,306,818</td>
+          <td class="col-13">12,759,955</td>
+          <td class="col-14">65,703,842</td>
         </tr>
         <tr>
           <td class="col-1">Suzuki</td>
           <td class="col-2">Alto</td>
-          <td class="col-3">Hybrid X</td>
+          <td class="col-3">X</td>
           <td class="col-4">5AA-HA97S</td>
           <td class="col-5">660</td>
-          <td class="col-6">2WD</td>
-          <td class="col-7">1,066,750</td>
-          <td class="col-8">70,000</td>
-          <td class="col-9">5,000</td>
-          <td class="col-10">1,141,750</td>
-          <td class="col-11">2,309,989</td>
-          <td class="col-12">461,998</td>
-          <td class="col-13">230,999</td>
-          <td class="col-14">1,815,000</td>
-          <td class="col-15">0</td>
-          <td class="col-16">908,817</td>
-          <td class="col-17">15,000</td>
-          <td class="col-18">1,750</td>
-          <td class="col-19">3,433,564</td>
-          <td class="col-20">3.43</td>
+          <td class="col-6">Hybrid</td>
+          <td class="col-7">5</td>
+          <td class="col-8">2WD</td>
+          <td class="col-9">1,066,750</td>
+          <td class="col-10">70,000</td>
+          <td class="col-11">5,000</td>
+          <td class="col-12">1,141,750</td>
+          <td class="col-13">2,309,989</td>
+          <td class="col-14">3,433,564</td>
         </tr>
         <tr>
           <td class="col-1">Suzuki</td>
           <td class="col-2">Alto</td>
-          <td class="col-3">Hybrid X</td>
+          <td class="col-3">X</td>
           <td class="col-4">5AA-HA97S</td>
           <td class="col-5">660</td>
-          <td class="col-6">2WD</td>
-          <td class="col-7">1,066,750</td>
-          <td class="col-8">70,000</td>
-          <td class="col-9">5,000</td>
-          <td class="col-10">1,141,750</td>
-          <td class="col-11">2,309,989</td>
-          <td class="col-12">461,998</td>
-          <td class="col-13">230,999</td>
-          <td class="col-14">1,815,000</td>
-          <td class="col-15">0</td>
-          <td class="col-16">908,817</td>
-          <td class="col-17">15,000</td>
-          <td class="col-18">1,750</td>
-          <td class="col-19">3,433,564</td>
-          <td class="col-20">3.43</td>
+          <td class="col-6">Hybrid</td>
+          <td class="col-7">5</td>
+          <td class="col-8">2WD</td>
+          <td class="col-9">1,066,750</td>
+          <td class="col-10">70,000</td>
+          <td class="col-11">5,000</td>
+          <td class="col-12">1,141,750</td>
+          <td class="col-13">2,309,989</td>
+          <td class="col-14">3,433,564</td>
         </tr>
       </tbody>
     </table>
