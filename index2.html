@@ -162,7 +162,7 @@
       <tr>
         <td class="col-1">Toyota</td>
         <td class="col-2">Land Cruiser 300</td>
-        <td class="col-3">GR SPORT 3.3L Diesel (5-seater)</td>
+        <td class="col-3">GR SPORT</td>
         <td class="col-4">3DA-FJA300W</td>
         <td class="col-5">3,300</td>
         <td class="col-6">4WD</td>
@@ -176,7 +176,7 @@
       <tr>
         <td class="col-1">Toyota</td>
         <td class="col-2">Land Cruiser 300</td>
-        <td class="col-3">GR SPORT 3.3L Diesel (5-seater)</td>
+        <td class="col-3">GR SPORT</td>
         <td class="col-4">3DA-FJA300W</td>
         <td class="col-5">3,300</td>
         <td class="col-6">4WD</td>
@@ -185,7 +185,7 @@
         <td class="col-9">15,000</td>
         <td class="col-10">6,306,818</td>
         <td class="col-11">12,759,955</td>
-        <td class="col-12">65,703,842</td>
+        <td class="col-12"><a href="javascript:void(0)" onclick="document.getElementById('modal-col12').style.display='block'">65,703,842</a></td>
       </tr>
       <tr>
         <td class="col-1">Suzuki</td>
@@ -199,7 +199,7 @@
         <td class="col-9">5,000</td>
         <td class="col-10">1,141,750</td>
         <td class="col-11">2,309,989</td>
-        <td class="col-12">3,433,564</td>
+        <td class="col-12"><a href="javascript:void(0)" onclick="document.getElementById('modal-col12').style.display='block'">3,433,564</a></td>
       </tr>
       <tr>
         <td class="col-1">Suzuki</td>
@@ -213,7 +213,7 @@
         <td class="col-9">5,000</td>
         <td class="col-10">1,141,750</td>
         <td class="col-11">2,309,989</td>
-        <td class="col-12">3,433,564</td>
+        <td class="col-12"><a href="javascript:void(0)" onclick="document.getElementById('modal-col12').style.display='block'">3,433,564</a></td>
       </tr>
       </tbody>
     </table>
@@ -530,39 +530,37 @@
 </script>
 
 <!-- Modal -->
-<div id="modal-col19" class="w3-modal">
+<div id="modal-col12" class="w3-modal">
   <div class="w3-modal-content w3-animate-top w3-card-4">
     <header class="w3-container w3-dark-grey">
-      <span onclick="document.getElementById('modal-col19').style.display='none'"
+      <span onclick="document.getElementById('modal-col12').style.display='none'"
             class="w3-button w3-display-topright">&times;</span>
       <h2>Duty Breakdown</h2>
     </header>
     <div class="w3-container">
-      <p>Here you can add more details or actions related to column 14.</p>
+      <p>Here you can see detail breakdown of the duty</p>
       <table>
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+          <th>CID</th>
+          <td>20%</td>
+          <td>2,551,991	</td>
         </tr>
         <tr>
-          <td>Alfreds</td>
-          <td>Maria</td>
-          <td>Germany</td>
+          <th>SUR</th>
+          <td>50%</td>
+          <td>1,275,995</td>
         </tr>
         <tr>
-          <td>Centro</td>
-          <td>Francisco</td>
-          <td>Mexico</td>
+          <th>XID</th>
+          <td>3,300 * 13,500</td>
+          <td>43,890,000</td>
         </tr>
       </table>
     </div>
     <footer class="w3-container w3-dark-grey">
-      <p>Modal Footer</p>
+      <p>Duty 12,759,955</p>
     </footer>
   </div>
 </div>
-
-
 </body>
 </html>
